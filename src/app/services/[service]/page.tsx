@@ -17,7 +17,7 @@ export default function ServicePage() {
     if (!serviceData) return router.replace('/404');
 
     return (
-        <section className=" p-8 mx-auto ">
+        <section className=" flex flex-col gap-6 ">
             <div className=''>
                 <div>
                     <h1>{serviceData.title}</h1>

@@ -17,7 +17,8 @@ const FeatureCard = ({ title, description, icon, link }: FeatureCardProps) => {
     }
 
     return (
-        <div className="flex items-center justify-center flex-col p-8 border-foreground border-[1px] rounded-lg " onClick={onClick}>
+        <div className="flex items-center justify-center flex-col p-8 border-foreground border-[1px] rounded-lg min-w-[240px]"
+            onClick={onClick}>
             <div className="flex items-center justify-center">
                 {icon}
             </div>

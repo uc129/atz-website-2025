@@ -28,10 +28,10 @@ const FeaturesData: FeatureCardProps[] = [
 
 const Foundations = () => {
     return (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-12">
             <ChipSvg />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-24">
+            <div className="grid grid-cols-1 md;grid-cols-2 lg:grid-cols-3 gap-4">
                 {
                     FeaturesData.map((feature, index) => {
                         return <FeatureCard key={index} {...feature} />

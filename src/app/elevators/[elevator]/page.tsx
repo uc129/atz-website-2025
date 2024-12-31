@@ -20,7 +20,7 @@ const ElevatorDetailPage = () => {
 
 
     return (
-        <section className=" px-8 flex flex-col gap-6">
+        <section className=" flex flex-col gap-6">
             <h1>{elevatorData.title}</h1>
 
             <p>
@@ -31,12 +31,12 @@ const ElevatorDetailPage = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-6">
-                        <Image src={elevatorData.images[1]} alt={elevatorData.title} width={290} height={260} className="" />
-                        <Image src={elevatorData.images[2]} alt={elevatorData.title} width={290} height={260} className="" />
+                        <Image src={elevatorData.images[1]} alt={elevatorData.title} width={320} height={320} className="" />
+                        <Image src={elevatorData.images[2]} alt={elevatorData.title} width={320} height={320} className="" />
                     </div>
                     <div className="flex flex-col gap-6">
-                        <Image src={elevatorData.images[1]} alt={elevatorData.title} width={320} height={260} className="" />
-                        <Image src={elevatorData.images[2]} alt={elevatorData.title} width={320} height={260} className="" />
+                        <Image src={elevatorData.images[1]} alt={elevatorData.title} width={320} height={320} className="" />
+                        <Image src={elevatorData.images[2]} alt={elevatorData.title} width={320} height={320} className="" />
                     </div>
                 </div>
             </div>

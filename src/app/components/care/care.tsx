@@ -46,7 +46,7 @@ const CustomersData = [
 
 const CareSection = () => {
     return (
-        <section className='w-[80%] mx-auto mb-12'>
+        <section className=' mb-12 '>
             <h1>A company that cares.</h1>
             <p>
                 We are a company that cares about our customers and the environment.
@@ -67,7 +67,7 @@ const CareSection = () => {
 
             </div>
 
-            <p className='text-center text-2xl w-[50%] mx-auto my-6'>For performance, efficiency and customer experience.
+            <p className='text-center text-2xl lg:w-[50%] mx-auto my-6'>For performance, efficiency and customer experience.
                 ATZ Elevators is trusted by some of the biggest names in the real-estate industry</p>
         </section>
     )

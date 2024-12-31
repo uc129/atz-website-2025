@@ -13,7 +13,7 @@ export default function AboutPage() {
 
 
     return (
-        <section className=" p-8 mx-auto">
+        <section className="">
             <div>
                 <div className="text-center">
                     <h1 className="">
@@ -31,8 +31,9 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                <div className="flex  items-center space-x-4 my-12 border-[1px] p-4 rounded-xl border-gray-200 hover:border-gray-500">
+                <div className="flex flex-col  items-center  my-12 border-[1px] p-4 rounded-xl border-gray-200 hover:border-gray-500">
                     <Image src="/images/atz-elevators.jpg" alt="ATZ Elevators" width={80} height={80} className="" />
+
                     <h2 className="text-center">
                         Our Mission
                     </h2>
@@ -79,11 +80,10 @@ export default function AboutPage() {
                     <Testimonials />
                 </div>
                 <div className="flex flex-col space-y-4">
-                    <h2>Contact Us</h2>
                     <p>
                         Get in touch with us to start your project today. We would love to hear from you.
                     </p>
-                    <LightButton label="Contact Us" onClick={() => { }} className="" />
+                    <DarkButton label="Contact Us" onClick={() => { }} className="" />
                 </div>
             </div>
         </section >

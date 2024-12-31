@@ -24,7 +24,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
 
 
     return (
-        <div onClick={props.link ? handleClick : () => { }} className={`wrapper border-[1px] 
+        <div onClick={props.link ? handleClick : () => { }} className={`wrapper border-[1px] min-w-[240px] 
          border-gray-200 transition-all duration-200 hover:border-gray-600 
          shadow-md rounded-md p-4 flex flex-col gap-4 *:flex *:flex-col *:gap-4
           ${props.classNames}`}>

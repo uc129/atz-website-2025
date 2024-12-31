@@ -41,7 +41,7 @@ const DesktopNavbar = () => {
                 <li>
                     <Link href="/services">Services</Link>
                 </li>
-                <li>
+                <li className="relative">
                     <Link href='/elevators'>Elevators</Link>
                 </li>
                 <li>
@@ -132,6 +132,9 @@ export const MobileNavbar = () => {
             </div>
             {isOpen &&
                 <ul className="flex flex-col  space-y-4 w-full min-h-screen bg-background p-8 *:text-foreground">
+                    <li>
+                        <Link href='/'>Home</Link>
+                    </li>
                     <li>
                         <Link href='/about'>About</Link>
                     </li>
