@@ -1,0 +1,30 @@
+/** @format */
+
+.cls-1 {
+  fill: none;
+  stroke: rgb(61, 199, 199);
+  stroke-width: 0.5px;
+  stroke-miterlimit: 10;
+}
+
+.cabin {
+  stroke: azure;
+  fill: none;
+  transform: scale(1.08);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: line-anim 5s ease-in-out forwards;
+}
+
+.line-anim {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: line-anim 5s ease-in-out forwards;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 4;
+  }
+}

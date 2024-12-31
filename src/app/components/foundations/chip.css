@@ -1,0 +1,73 @@
+/** @format */
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
+  fill: none;
+}
+
+.cls-6 {
+  fill: #d6d6d6;
+}
+
+.cls-7 {
+  fill: var(----background);
+}
+
+.cls-7,
+.cls-8 {
+  stroke: var(--foreground);
+}
+
+.cls-7,
+.cls-8,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
+  stroke-miterlimit: 10;
+}
+
+.cls-9 {
+  fill: var(--foreground);
+}
+
+.cls-2 {
+  stroke-width: 0.59px;
+}
+
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
+  stroke: var(--foreground);
+}
+
+.cls-3 {
+  stroke-width: 0.54px;
+}
+
+.cls-4 {
+  stroke-width: 0.64px;
+}
+
+.cls-5 {
+  stroke-width: 0.5px;
+}
+
+.wire-anim {
+  animation: wire-anim 2s infinite ease-in-out alternate;
+}
+
+@keyframes wire-anim {
+  0% {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+  }
+  100% {
+    stroke-dashoffset: 1;
+    stroke-dasharray: 1;
+  }
+}

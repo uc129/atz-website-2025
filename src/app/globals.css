@@ -1,3 +1,5 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,8 +16,107 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nav-padding {
+  padding: 0 10rem;
+}
+.body-padding {
+  padding: 0 4rem;
+}
+.nav-text {
+  @apply text-sm text-gray-500;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+}
+
+p {
+  font-size: 1rem;
+  /* line-height: 1.5; */
+}
+
+.text-gray {
+  @apply text-gray-500;
+}
+
+.text-body-large {
+  @apply text-2xl;
+}
+
+/*  */
+
+.ticker {
+  animation: ticker 30s linear infinite;
+}
+
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+ul.feature-list{
+  @apply flex flex-col gap-2
 }
