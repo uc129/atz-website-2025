@@ -79,23 +79,6 @@ const DesktopNavbar = () => {
 }
 
 
-export default function Navbar() {
-    const { isTablet, isMobile, isDesktop } = useWindowSize()
-    // console.log('isDark', isDark);
-
-    return (
-        <nav className="border-b-[1px] border-gray-200 ">
-            {(!isTablet && !isMobile && !isDesktop) ?
-                <DesktopNavbar />
-                :
-                <MobileNavbar />
-            }
-        </nav>
-    )
-
-
-}
-
 export const MobileNavbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -124,11 +107,14 @@ export const MobileNavbar = () => {
 
     return (
         <div className="">
-            <div className="w-full nav-button flex justify-end border-white border-collapse">
-                <button onClick={handleSearchClick}>
-                    <IoIosSearch size={24} />
-                </button>
-                <button onClick={handleClick} className="p-4" > <IoIosMenu size={36} /></button>
+            <div className="flex justify-between items-center p-4">
+                <Link href='/' className="min-w-44"><h6>ATZ Elevators</h6></Link>
+                <div className="w-full nav-button flex justify-end border-white border-collapse">
+                    <button onClick={handleSearchClick}>
+                        <IoIosSearch size={24} />
+                    </button>
+                    <button onClick={handleClick} className="p-4" > <IoIosMenu size={36} /></button>
+                </div>
             </div>
             {isOpen &&
                 <ul className="flex flex-col  space-y-4 w-full min-h-screen bg-background p-8 *:text-foreground">
@@ -158,3 +144,20 @@ export const MobileNavbar = () => {
         </div>
     )
 }
+
+export default function Navbar() {
+    const { isTablet, isMobile, isDesktop } = useWindowSize()
+
+    return (
+        <nav className="border-b-[1px] border-gray-200 ">
+            {(!isTablet && !isMobile && !isDesktop) ?
+                <DesktopNavbar />
+                :
+                <MobileNavbar />
+            }
+        </nav>
+    )
+
+
+}
+

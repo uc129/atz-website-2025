@@ -7,23 +7,27 @@ const largeCardsData: CardsWithImageProps[] = [
         title: "Elevator Maintenance",
         description: "We offer a range of maintenance services to keep your elevators running smoothly.",
         // buttonText: "Learn More", 
-        link: "/maintenance",
-        image: "/icons/elevator-maintenance.svg"
+        link: "services//elevator-maintenance",
+        image: "/icons/elevator-maintenance.svg",
+        alternateImage: "/icons/elevator-maintenance-light.svg"
+
     },
     {
         title: "Elevator Installation",
         description: "We offer a range of installation services to meet your needs.",
         // buttonText: "Learn More",
-        link: "/installation",
-        image: "/icons/elevator-installation.svg"
+        link: "/services/elevator-installation",
+        image: "/icons/elevator-installation.svg",
+        alternateImage: "/icons/elevator-installation-light.svg"
 
     },
     {
         title: "Elevator Modernization",
         description: "Modernize your elevators to improve safety, reliability, and energy efficiency.",
         // buttonText: "Learn More",
-        link: "/modernization",
-        image: "/icons/elevator-repair.svg"
+        link: "/services/elevator-repair",
+        image: "/icons/elevator-repair.svg",
+        alternateImage: "/icons/elevator-repair-light.svg"
 
     },
 
@@ -35,34 +39,33 @@ const smallCardsData: SmallCardsProps[] = [
     {
         title: 'Elevator Optimizations',
         description: 'Optimize your elevators to improve safety, reliability, and energy efficiency.',
-        link: '/optimization'
-
+        features: ['Safety', 'Reliability', 'Energy Efficiency']
     },
     {
         title: 'Elevator Repairs',
         description: 'We offer a range of repair services to keep your elevators running smoothly.',
-        link: '/repairs'
+        features: ['Safety', 'Reliability', 'Energy Efficiency']
 
     },
     {
         title: 'Elevator Inspections',
         description: 'We offer a range of inspection services to keep your elevators running smoothly.',
-        link: '/inspections'
+        features: ['Safety', 'Reliability', 'Energy Efficiency']
     },
     {
         title: 'Elevator Upgrades',
         description: 'We offer a range of upgrade services to keep your elevators running smoothly.',
-        link: '/upgrades'
+        features: ['Safety', 'Reliability', 'Energy Efficiency']
     },
     {
         title: 'Elevator Safety',
         description: 'We offer a range of safety services to keep your elevators running smoothly.',
-        link: '/safety'
+        features: ['Safety', 'Reliability', 'Energy Efficiency']
     },
     {
         title: 'Elevator Compliance',
         description: 'We offer a range of compliance services to keep your elevators running smoothly.',
-        link: '/compliance'
+        features: ['Safety', 'Reliability', 'Energy Efficiency']
     }
 
 ]
@@ -74,26 +77,23 @@ const ServicesOverview = () => {
 
 
     return (
-        <section className="w-[80%] mx-auto my-20">
+        <section className="">
 
             <div className="flex flex-col gap-12">
 
-                <div className="flex flex-col lg:grid grid-cols-8 w-[80%] mx-auto items-center lg:pl-44">
-                    <h2 className="col-span-3 text-center lg:text-left">ATZ Elevator Services?</h2>
-                    <p className="col-span-5 text-gray text-body-large text-center lg:text-left">
-                        Everything you need to run your elevators at peak performance.
-                    </p>
+                <div className="flex flex-col items-center justify-center">
+                    <h2 className="text-teal">ATZ Elevators <span>?</span></h2>
+                    <p>Everything you need to run your elevators at peak performance.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   ">
 
-                    {
-                        largeCardsData.map((card) => {
-                            return (
-                                <CardsWithImage {...card} imageClasses="scale-[60%]" />
-                            )
-                        })
-                    }
+                <div key={123456} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   ">
+
+                    <CardsWithImage key={largeCardsData[0].link} {...largeCardsData[0]} imageClasses="scale-[72%]" />
+                    <CardsWithImage key={largeCardsData[1].link} {...largeCardsData[1]} imageClasses="scale-[60%]" />
+                    <CardsWithImage key={largeCardsData[2].link} {...largeCardsData[2]} imageClasses="scale-[70%]" />
+
+
                     {
                         smallCardsData.map((card) => {
                             return (

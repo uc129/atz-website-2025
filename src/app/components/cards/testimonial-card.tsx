@@ -33,7 +33,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
                 <p className="">"{props.description}"</p>
             </div>
 
-            <div>
+            <div className="flex gap-4 items-end">
                 <Image src={props.image} alt="Testimonial" width={50} height={50} />
                 <p className="text-xs">{props.subTitle}</p>
             </div>

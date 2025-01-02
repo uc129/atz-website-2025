@@ -7,9 +7,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --blue:#0a3251;
+  --teal: #0a808d;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -21,7 +23,7 @@
     --background: #ffffff;
     --foreground: #171717;
   }
-}
+} */
 html{
   scroll-behavior: smooth;
 }
@@ -35,7 +37,7 @@ body {
 
 main {
   width: 90%;
-  max-width: 1800px;
+  max-width: 1480px;
   margin: 0 auto;
   padding: 1rem 2rem;
   overflow: hidden;
@@ -43,6 +45,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  text-justify: distribute;
 }
 
 .nav-padding {
@@ -55,41 +58,74 @@ main {
   @apply text-sm text-gray-500;
 }
 
+.container-center{
+  @apply max-w-[90%] mx-auto
+}
+
+/* buttons */
+
+.button-up{
+  @apply  cursor-pointer hover:-translate-y-[1px] transition-transform duration-200
+}
+
+.button-down{
+  @apply  cursor-pointer hover:translate-y-[1px] transition-transform duration-200
+}
+
+.button-right{
+  @apply  cursor-pointer hover:translate-x-[1px] transition-transform duration-200
+}
+
+.button-left{
+  @apply  cursor-pointer hover:-translate-x-[1px] transition-transform duration-200
+}
+
 /* Headings */
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
+  color: var(--blue);
   /* margin-bottom: 1rem; */
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 700;
+  color: var(--blue);
+
   /* margin-bottom: 1rem; */
 }
 
 h3 {
   font-size: 1.5rem;
   font-weight: 700;
+  color: var(--blue);
+
   /* margin-bottom: 1rem; */
 }
 
 h4 {
   font-size: 1.25rem;
   font-weight: 700;
+  color: var(--blue);
+
   /* margin-bottom: 1rem; */
 }
 
 h5 {
   font-size: 1rem;
   font-weight: 700;
+  color: var(--blue);
+
   /* margin-bottom: 1rem; */
 }
 
 h6 {
   font-size: 0.875rem;
   font-weight: 700;
+  color: var(--blue);
+  
   /* margin-bottom: 1rem; */
 }
 
@@ -106,10 +142,19 @@ p {
   @apply text-2xl;
 }
 
+
+
+
+/*  */
+
+/* footer{
+  @apply bg-blue text-white text-center py-4
+} */
+
 /*  */
 
 .ticker {
-  animation: ticker 30s linear infinite;
+  animation: ticker 4s linear infinite;
 }
 
 
@@ -124,4 +169,16 @@ p {
 
 ul.feature-list{
   @apply flex flex-col gap-2
+}
+
+.footer{
+  @apply bg-blue text-white text-center py-4
+}
+
+.footer-container{
+  @apply w-[80%] mx-auto p-4 flex flex-col gap-2
+}
+
+.footer-links{
+  @apply flex justify-center gap-4 
 }

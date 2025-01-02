@@ -3,17 +3,18 @@
 const Footer = () => {
 
     return (
-        <footer>
-            <div className="w-[80%] mx-auto my-20">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="footer-text">
-                            <p>© 2021 ATZ ELevators. All Rights Reserved.</p>
-                        </div>
-                    </div>
+        <footer className="footer ">
+            <div className="footer-container">
+                <div className="footer-text">
+                    <p>© 2021 ATZ ELevators. All Rights Reserved.</p>
                 </div>
+                <ul className="footer-links">
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                </ul>
             </div>
-        </footer>)
+        </footer>
+    )
 
 
 }

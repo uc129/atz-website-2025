@@ -3,19 +3,15 @@ import { useEffect } from 'react'
 import './chip.css'
 
 
+
 export const ChipSvg = () => {
 
 
 
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('wire-anim')
-                }
-            })
-        }, { threshold: 0.5 })
+
+
+    const addAnimation = () => {
         let wires = document.querySelectorAll('.wire') as NodeListOf<SVGPathElement>;
         wires.forEach((wire, index) => {
             wire.style.strokeDasharray = wire.getTotalLength().toString();
@@ -24,13 +20,27 @@ export const ChipSvg = () => {
             // observer.observe(wire);
             wire.style.animation = `wire-anim 5s ease forwards  ${index / 7 + 1}s`
         })
+    }
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log(entry.target, 'intersecting')
+                    addAnimation()
+
+                }
+            })
+        }, { threshold: 0.5 })
+        observer.observe(document.querySelector('#chip-svg') as Element);
+        return () => {
+            observer.disconnect();
+        }
+    }, [])
 
 
-    })
 
-
-
-    return <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 889.79 192.43">
+    return <svg id="chip-svg" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 889.79 192.43">
         <defs>
             <style>
             </style>
@@ -64,7 +74,7 @@ export const ChipSvg = () => {
                 <rect className="cls-9" x="350.11" y="81.72" width="4.39" height="8.11" transform="translate(438.08 -266.53) rotate(90)" />
             </g>
             <polyline className="cls-5 wire" points="392.4 41.08 392.4 3.09 327.47 3.09" />
-            <line className="cls-5" x1="470.27" y1="40.98" x2="470.27" y2="3.18" />
+            <line className="cls-5 wire" x1="470.27" y1="40.98" x2="470.27" y2="3.18" />
             <polyline className="cls-2 wire" points="509.2 41.26 509.2 30.55 886.61 30.55 886.61 176.9" />
             <polyline className="cls-4 wire" points="553.06 73.39 831.76 73.39 831.76 176.24" />
             <polyline className="cls-3 wire" points="552.57 85.66 625.27 85.66 625.27 151.53 497.78 151.53 497.78 189.65" />

@@ -3,42 +3,42 @@
 import Image from 'next/image'
 import React from 'react'
 
-const CustomersData = [
+const ClientData = [
     {
-        name: "John Doe",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 1",
+        image: "https://picsum.photos/200",
     },
     {
-        name: "Jane Doe",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 2",
+        image: "https://picsum.photos/200",
     },
     {
-        name: "John Smith",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 3",
+        image: "https://picsum.photos/200",
     },
     {
-        name: "Jane Smith",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 4",
+        image: "https://picsum.photos/200",
     },
     {
-        name: "John Johnson",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 5",
+        image: "https://picsum.photos/200",
     },
     {
-        name: "Jane Johnson",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 6",
+        image: "https://picsum.photos/200",
     },
     {
-        name: "John Brown",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 7",
+        image: "https://picsum.photos/200",
     },
     {
-        name: "Jane Brown",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 8",
+        image: "https://picsum.photos/200",
     },
     {
-        name: "John White",
-        image: "https://randomuser.me/api/portraits",
+        name: "Client 9",
+        image: "https://picsum.photos/200",
     },
 
 ]
@@ -46,30 +46,31 @@ const CustomersData = [
 
 const CareSection = () => {
     return (
-        <section className=' mb-12 '>
-            <h1>A company that cares.</h1>
-            <p>
-                We are a company that cares about our customers and the environment.
-                We are committed to providing the best service possible while also being environmentally friendly.
-                We use sustainable materials and practices to ensure that our products are safe for you and the planet. We also give back to the community by donating a portion of our profits to local charities. When you choose us, you are choosing a company that cares.
-            </p>
+        <section className=' mb-12 lg:max-w-[60%] '>
+            <div className=' '>
+                <h1>A company that cares.</h1>
+                <p>
+                    We are a company that cares about our customers and the environment.
+                    We are committed to providing the best service possible while also being environmentally friendly.
+                    We use sustainable materials and practices to ensure that our products are safe for you and the planet. We also give back to the community by donating a portion of our profits to local charities. When you choose us, you are choosing a company that cares.
+                </p>
+            </div>
+
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8'>
 
                 {
-                    CustomersData.map((customer, index) => (
-                        <div key={customer.image + index} className='flex items-center space-x-4'>
+                    ClientData.map((customer, index) => (
+                        <div key={customer.image + index} className='flex items-end space-x-4'>
                             <Image src={customer.image} alt={customer.name} width={300} height={300} className='w-16 h-16 rounded-full' />
-                            <p>{customer.name}</p>
                         </div>
                     ))
                 }
 
             </div>
 
-            <p className='text-center text-2xl lg:w-[50%] mx-auto my-6'>For performance, efficiency and customer experience.
-                ATZ Elevators is trusted by some of the biggest names in the real-estate industry</p>
         </section>
+
     )
 }
 

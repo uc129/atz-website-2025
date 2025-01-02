@@ -7,7 +7,7 @@ const TestimonialData = [
         title: 'CEO',
         org: 'XYZ Company',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tell us about yourself and we will get back to you as soon as possible.',
-        image: "https://randomuser.me/api/portraits/2ekjk"
+        image: "https://picsum.photos/200",
     },
     {
         id: 2000,
@@ -15,8 +15,7 @@ const TestimonialData = [
         title: 'CTO',
         org: 'XYZ Company',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tell us about yourself and we will get back to you as soon as possible.',
-        image: "https://randomuser.me/api/portraits/e2krjf"
-
+        image: "https://picsum.photos/200",
     },
     {
         id: 3000,
@@ -24,7 +23,7 @@ const TestimonialData = [
         title: 'COO',
         org: 'XYZ Company',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nunc vitae tell us about yourself and     we will get back to you as soon as possible.',
-        image: "https://randomuser.me/api/portraits/kjenrf"
+        image: "https://picsum.photos/200"
 
     },
 ]
@@ -38,7 +37,8 @@ export const Testimonials = () => {
                 {
                     TestimonialData.map((testimonial) => {
                         return (
-                            <TestimonialCard key={testimonial.id} title={testimonial.name} subTitle={testimonial.title + ',' + testimonial.org}
+                            <TestimonialCard key={testimonial.id} title={testimonial.name}
+                                subTitle={testimonial.title + ',' + testimonial.org}
                                 description={testimonial.desc} image={testimonial.image} link="/" />
                         )
                     })

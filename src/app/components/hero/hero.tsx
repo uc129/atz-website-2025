@@ -1,39 +1,45 @@
 'use client'
 import DarkButton from "../form-components/buttons/button-dark";
 import LightButton from "../form-components/buttons/light-button";
-import { ElevatorCabin } from "./cabin";
-import ATZLandingGrid from "./landing-grid";
+import { useRouter } from "next/navigation";
 
 
 
 const HeroSection = () => {
 
-
+    const router = useRouter();
 
     return (
-        <section className="w-[80%] mx-auto   py-20 relative "
+        <section className="my-16 lg:my-36  xl:my-44 container-center "
         // style={{ backgroundImage: "url('/atz-landing-grid.svg" }}
         >
-            <div className="absolute top-0 left-0 w-full h-full">
-                {/* <ATZLandingGrid /> */}
-                {/* <ElevatorCabin /> */}
-            </div>
 
-            <div className="flex *:w-full flex-col gap-2 justify-center items-center min-h-[40vh]  *:py-8 ">
 
-                <h1 className="text-5xl lg:text-8xl font-bold text-center">The Elevators Company for India.</h1>
+            <div className="flex *:w-full flex-col gap-8 justify-center items-center min-h-[50vh]   ">
 
-                <p className="lg:text-body-large text-center w-[80%] px-2 lg:px-32 xl:px-44  text-gray">
-                    Used by some of the world's largest real estate companies,
-                    ATZ enables you to create  <span className="text-foreground font-semibold">high-quality experiences</span> with the power of ATZ Services.
+                <h1 className="text-[2.8rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-none font-bold text-center
+                text-blue
+                ">
+                    <span>The ELEVATORS COMPANY </span><span>for INDIA</span>
+                </h1>
+
+                <p className="lg:text-body-large text-center md:flex flex-col  text-gray container-center md:px-8 lg:px-12 xl:px-16">
+                    <span className="md:px-4">Used by some of the world's largest real estate companies, </span>
+                    <span>
+                        ATZ enables you to create &nbsp;
+                        <span className="text-teal font-semibold">
+                            high-quality experiences
+                        </span>
+                        &nbsp;with the power of ATZ Services.
+                    </span>
                 </p>
 
                 <div className="flex gap-4  justify-center">
-                    <DarkButton label="Get Started" onClick={() => { }} />
-                    <LightButton label="Learn More" onClick={() => { }} />
+                    <DarkButton label="Get Started" onClick={() => { router.push('/about') }} />
+                    <LightButton label="Learn More" onClick={() => { router.push('/elevators') }} />
                 </div>
-                <div className="-mt-12 text-gray">
-                    <p className="text-center">Keeping the world in motion...</p>
+                <div className=" text-gray">
+                    <p className="text-center text-teal">Keeping the world in motion...</p>
                 </div>
 
 

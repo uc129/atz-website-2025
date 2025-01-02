@@ -10,8 +10,15 @@ export const Ticker = (props: TickerProps) => {
         <div>
             <div className="w-screen overflow-hidden">
 
-                <div className="flex w-[300vw] overflow-visible ticker gap-8">
-                    {props.slides}
+                <div className="flex w-[200vw] overflow-visible ticker gap-8">
+                    {
+                        props.slides.map((slide, index) => (
+                            <div key={index} className="flex items-center gap-2">
+                                {slide}
+                            </div>
+                        ))
+                    }
+
                 </div>
             </div>
 
